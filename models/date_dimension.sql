@@ -16,10 +16,9 @@ CASE WHEN MONTH(TO_TIMESTAMP(STARTED_AT)) in (12,1,2)
     THEN 'SUMMER'
     ELSE 'AUTUMN' 
     END AS STATION_OF_YEAR
-    , {{function1('STARTED_AT')}}
 from {{ source('demo', 'bike') }}
 where STARTED_AT != 'started_at' and STARTED_AT != '"started_at"'
 )
-
+, {{function1('STARTED_AT')}} as abc
 select *
 from CTE
