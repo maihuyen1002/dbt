@@ -17,7 +17,7 @@ CASE WHEN MONTH(TO_TIMESTAMP(STARTED_AT)) in (12,1,2)
     ELSE 'AUTUMN' 
     END AS STATION_OF_YEAR
     , {{function1('STARTED_AT')}} as abc
-from {{ source('demo', 'bike') }}
+from {{ ref('stg_bike') }}
 where STARTED_AT != 'started_at' and STARTED_AT != '"started_at"'
 )
 select *
