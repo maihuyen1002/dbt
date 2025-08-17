@@ -7,3 +7,10 @@ sources:
     tables:
       - name: bike
       - name: weather
+
+ources:
+  - name: USCRIME
+    database: US_CRIME
+    schema: CYBERSYN
+    tables:
+      - name: URBAN_CRIME_INCIDENT_LOG
