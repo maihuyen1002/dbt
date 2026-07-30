@@ -8,7 +8,6 @@ sources:
       - name: bike
       - name: weather
 
-ources:
   - name: USCRIME
     database: US_CRIME
     schema: CYBERSYN
